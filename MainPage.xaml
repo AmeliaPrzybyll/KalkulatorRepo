@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.MainPage"
+             BackgroundColor="#606c38">
+
+    <VerticalStackLayout
+        Padding="30,50"
+        Spacing="25">
+
+        <Image
+            Source="kalkulator.png"
+            Aspect="AspectFit"
+            HeightRequest="100"
+            WidthRequest="100"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"/>
+
+        <Label
+            x:Name="DisplayLabel"
+            Text="0"
+            FontSize="48"
+            HorizontalTextAlignment="End"
+            VerticalTextAlignment="Center"
+            HeightRequest="80"
+            BackgroundColor="#fefae0"
+            Padding="10"
+            TextColor="Black" />
+
+        <Grid RowSpacing="10" ColumnSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Text="7" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="0" Grid.Column="0" Clicked="OnNumberClicked"/>
+            <Button Text="8" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="0" Grid.Column="1" Clicked="OnNumberClicked"/>
+            <Button Text="9" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="0" Grid.Column="2" Clicked="OnNumberClicked"/>
+            <Button Text="/" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="0" Grid.Column="3" Clicked="OnOperatorClicked"/>
+
+            <Button Text="4" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="1" Grid.Column="0" Clicked="OnNumberClicked"/>
+            <Button Text="5" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="1" Grid.Column="1" Clicked="OnNumberClicked"/>
+            <Button Text="6" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="1" Grid.Column="2" Clicked="OnNumberClicked"/>
+            <Button Text="*" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="1" Grid.Column="3" Clicked="OnOperatorClicked"/>
+
+            <Button Text="1" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="2" Grid.Column="0" Clicked="OnNumberClicked"/>
+            <Button Text="2" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="2" Grid.Column="1" Clicked="OnNumberClicked"/>
+            <Button Text="3" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="2" Grid.Column="2" Clicked="OnNumberClicked"/>
+            <Button Text="-" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="2" Grid.Column="3" Clicked="OnOperatorClicked"/>
+
+            <Button Text="0" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Clicked="OnNumberClicked"/>
+            <Button Text="." BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="3" Grid.Column="2" Clicked="OnNumberClicked"/>
+            <Button Text="+" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="3" Grid.Column="3" Clicked="OnOperatorClicked"/>
+
+            <Button Text="√" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="4" Grid.Column="0" Clicked="OnSqrtClicked"/>
+            <Button Text="%" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="4" Grid.Column="1" Clicked="OnPercentageClicked"/>
+            <Button Text="C" BackgroundColor="#bc6c25" TextColor="White" BorderColor="#fefae0" Grid.Row="4" Grid.Column="2" Clicked="OnClearClicked"/>
+            <Button Text="=" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="4" Grid.Column="3" Clicked="OnEqualsClicked"/>
+
+            <Button Text="x²" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="5" Grid.Column="0" Clicked="OnPowerClicked"/>
+            <Button Text="log10" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="5" Grid.Column="1" Clicked="OnLog10Clicked"/>
+            <Button Text="log" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="5" Grid.Column="2" Clicked="OnLogWithBaseClicked"/>
+            <Button Text="sin" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="5" Grid.Column="3" Clicked="OnSinClicked"/>
+
+            <Button Text="cos" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="6" Grid.Column="0" Clicked="OnCosClicked"/>
+            <Button Text="tan" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="6" Grid.Column="1" Clicked="OnTanClicked"/>
+            <Button Text="Base" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="6" Grid.Column="2" Clicked="OnBaseClicked"/>
+            <Button Text="1/x" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="6" Grid.Column="3" Clicked="OnInverseClicked"/>
+
+            <Button Text="x^y" BackgroundColor="#283618" TextColor="White" BorderColor="#fefae0" Grid.Row="7" Grid.Column="0" Clicked="OnExponentClicked"/>
+            <Button Text="^" BackgroundColor="#dda15e" TextColor="White" BorderColor="#fefae0" Grid.Row="7" Grid.Column="1" Clicked="OnCaretClicked"/>
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
